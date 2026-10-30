@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мои Курсы</title>
+    <!-- Подключаем главного робота Telegram, чтобы сайт работал внутри мессенджера -->
+    <script src="https://telegram.org"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: var(--tg-theme-bg-color, #ffffff);
+            color: var(--tg-theme-text-color, #000000);
+            padding: 15px;
+            margin: 0;
+        }
+        .course-card {
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background-color: var(--tg-theme-secondary-bg-color, #f5f5f5);
+        }
+        .btn-buy {
+            display: inline-block;
+            width: 100%;
+            padding: 10px;
+            background-color: var(--tg-theme-button-color, #2481cc);
+            color: var(--tg-theme-button-text-color, #ffffff);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Books by Kristina Kichigina:</h2>
+
+    <!-- КАРТОЧКА КУРСА №1 -->
+    <div class="course-card">
+        <h3>Conductor of the World</h3>
+        <p>Conductor of the World extends a philosophical exploration of consciousness by presenting the nervous system.</p>
+        <p><strong>Price: 19 $</strong></p>
+        <!-- ТУТ ВЫ ВСТАВИТЕ ССЫЛКУ ИЗ ЮМОНЕЙ -->
+        <button class="btn-buy" onclick="Telegram.WebApp.openLink('ССЫЛКА_НА_ОПЛАТУ_ЮMONEY_1')">Buy Paperback</button>
+    </div>
+
+    <!-- КАРТОЧКА КУРСА №2 -->
+    <div class="course-card">
+        <h3>Movement of Life</h3>
+        <p>Movement of Life offers a radical rethinking of perception, embodiment, and consciousness.</p>
+        <p><strong>Price: 19 $</strong></p>
+        <!-- ТУТ ВЫ ВСТАВИТЕ ВТОРУЮ ССЫЛКУ ИЗ ЮМОНЕЙ -->
+        <button class="btn-buy" onclick="Telegram.WebApp.openLink('ССЫЛКА_НА_ОПЛАТУ_ЮMONEY_2')">Buy Paperback</button>
+    </div>
+
+    <script>
+        // Сообщаем Telegram, что приложение полностью загрузилось и готово к работе
+        Telegram.WebApp.ready();
+    </script>
+</body>
+</html>
